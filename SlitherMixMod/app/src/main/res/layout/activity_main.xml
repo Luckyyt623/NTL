@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Main WebView for Slither.io -->
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Mobile Controls Overlay -->
+    <FrameLayout
+        android:id="@+id/controls_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false">
+
+        <!-- Joystick Base (left side) -->
+        <com.slithermix.ntl.JoystickView
+            android:id="@+id/joystick"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:alpha="0.75" />
+
+        <!-- Boost Button (right side) -->
+        <com.slithermix.ntl.BoostButton
+            android:id="@+id/boost_btn"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="50dp"
+            android:alpha="0.80" />
+
+        <!-- Skin Selector Button (top right) -->
+        <ImageView
+            android:id="@+id/skin_btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_skin"
+            android:background="@drawable/circle_bg"
+            android:padding="8dp"
+            android:alpha="0.85"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Settings Button (top right, below skin) -->
+        <ImageView
+            android:id="@+id/settings_btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_settings"
+            android:background="@drawable/circle_bg"
+            android:padding="8dp"
+            android:alpha="0.85"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+</FrameLayout>

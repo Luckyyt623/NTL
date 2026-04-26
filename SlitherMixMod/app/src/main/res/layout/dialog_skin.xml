@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#CC1a1a2e">
+
+    <TextView
+        android:text="🐍 Choose Skin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFD700"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Color pickers row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:text="Color 1:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="8dp" />
+
+        <View
+            android:id="@+id/color1_preview"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="#FF0000" />
+
+        <SeekBar
+            android:id="@+id/hue1_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="360"
+            android:progress="0"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:text="Color 2:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="8dp" />
+
+        <View
+            android:id="@+id/color2_preview"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="#0000FF" />
+
+        <SeekBar
+            android:id="@+id/hue2_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="360"
+            android:progress="240"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Skin pattern grid -->
+    <TextView
+        android:text="Pattern:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="8dp" />
+
+    <GridView
+        android:id="@+id/skin_grid"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:numColumns="6"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:scrollbars="vertical" />
+
+    <!-- Accessory selection -->
+    <TextView
+        android:text="Accessory:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/accessory_row"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" />
+    </HorizontalScrollView>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎲 Random"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#444444" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓ Apply"
+            android:backgroundTint="#00aa44" />
+    </LinearLayout>
+
+</LinearLayout>
