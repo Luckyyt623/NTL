@@ -129,7 +129,7 @@ public class SkinDialog extends Dialog {
             hue1Slider.setProgress(hue1);
             hue2Slider.setProgress(hue2);
             updateColorPreviews();
-            skinGrid.getAdapter().notifyDataSetChanged();
+            ((BaseAdapter) skinGrid.getAdapter()).notifyDataSetChanged();
             buildAccessoryRow();
             Toast.makeText(ctx, "🎲 Random skin!", Toast.LENGTH_SHORT).show();
         });
